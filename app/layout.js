@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -105,6 +106,21 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased ${aclonica.variable}`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-WSXMJ56W"
+          strategy="afterInteractive"
+        />
+
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());  
+          `}
+        </Script>
+      </head>
+
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
