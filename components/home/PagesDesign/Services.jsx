@@ -45,7 +45,7 @@ export default function Services() {
     return (
         <div className='w-full flex justify-center items-center '>
             <div className="main w-full justify-center px-2 grid gap-16 mt-12 md:mt-0">
-                <div className="service-hero w-full h-screen grid md:grid-cols-2 justify-center items-center ">
+                <div className="service-hero w-full h-[60vh] grid md:grid-cols-2 justify-center items-center ">
                     <div className="left max-w-[500px]">
                         <div className="main-service-head  grid gap-6 max-w-[500px] ">
                             <div className="main-landing-content  text-4xl font-medium  ">

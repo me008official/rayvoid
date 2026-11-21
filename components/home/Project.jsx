@@ -22,25 +22,25 @@ export default function Project() {
             id: 1,
             project_title: "Proffesional Mordern Portfollio For Genzy ",
             project_description: "This portfollio for mordern Genzy style so it's mordern so let's do work for next genration",
-            project_img: "/moon-light.PNG"
+            project_img: "/imac-furniture.png"
         },
         {
             id: 2,
             project_title: "Mordern Scholl Management CMS (Student,Techer,Exam,Result)",
             project_description: "This portfollio for mordern Genzy style so it's mordern",
-            project_img: "/mk-frame-work.PNG"
+            project_img: "/imac-nivani.png"
         },
         {
             id: 3,
             project_title: "Proffesional Mordern Portfollio ",
             project_description: "This portfollio for mordern Genzy style so it's mordern",
-            project_img: "/brnad-landing-image.png"
+            project_img: "/imac-furniture.png"
         },
         {
             id: 4,
             project_title: "Proffesional Mordern Portfollio ",
             project_description: "This portfollio for mordern Genzy style so it's mordern",
-            project_img: "/brnad-landing-image.png"
+            project_img: "/imac-furniture.png"
         }
     ]
     const tabData = [
@@ -73,27 +73,12 @@ export default function Project() {
                     ))}
                 </div>
                 <Carousel>
-                    <CarouselContent className="w-full ml-0 py-4">
+                    <CarouselContent className="w-full grid sm:grid-cols-2 md:grid-cols-3 justify-center  gap-2  ml-0 py-4">
                         {ProjectOnly.map((data) => (
-                            <CarouselItem key={data.id} className="w-full basis-full pl-0">
-
-
+                            <CarouselItem key={data.id} className="w-full basis-full pl-0 ">
                                 <Image src={data.project_img} alt='ff' width={500} height={500} className='w-full aspect-[3/2] object-contain ' />
-                                <CardTitle className={" text-2xl md:text-3xl font-aclonica "}>{data.project_title}</CardTitle>
-                                <CardDescription className={"text-lg"}>{data.project_description}</CardDescription>
-
-                                {/* <div className="buttons flex w-full justify-between items-center py-2">
-                                    <div className="left w-full flex gap-4 items-center">
-                                        <button className='text-primary'><Heart size={28} /></button>
-                                        <button className='text-primary'><UsersCollaboration size={28} /></button>
-                                    </div>
-                                    <div className="rigt">
-                                        <Button className={"py-5 px-4 text-lg "}>View Site</Button>
-
-                                    </div>
-                                </div> */}
-
-
+                                <CardTitle className={" text-2xl md:text-lg font-aclonica mt-6 truncate"}>{data.project_title}</CardTitle>
+                                <CardDescription className={"text-sm "}>{data.project_description}</CardDescription>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
